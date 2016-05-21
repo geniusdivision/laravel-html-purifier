@@ -7,6 +7,7 @@ Table of contents
   * [Installation](#installation)
     * [Composer](#composer)
   * [Usage](#usage)
+  * [Added rules](#added-rules)
   * [License](#license)
   * [Author](#author)
 
@@ -15,7 +16,7 @@ General
 =======
 This package helps purifying HTML markup from unwanted one, like script tags or similar.
 
-It uses the [https://github.com/ezyang/htmlpurifier](ezyang/htmlpurifier) package with some added HTML5 rules. 
+It uses the [https://github.com/ezyang/htmlpurifier](ezyang/htmlpurifier) package with some added HTML5 rules.
 
 Installation
 ============
@@ -43,6 +44,37 @@ $purifiedHtml = $purifier->purify($dirtyHtml);
 ```
 
 If you have any issues feel free to open a ticket.
+
+Added rules
+===========
+- Elements
+    - `<section>`
+    - `<nav>`
+    - `<article>`
+    - `<aside>`
+    - `<header>`
+    - `<footer>`
+    - `<address>`
+    - `<hgroup>`
+    - `<figure>`
+    - `<figcaption>`
+    - `<video>`
+    - `<source>`
+    - `<s>`
+    - `<var>`
+    - `<sub>`
+    - `<sup>`
+    - `<mark>`
+    - `<wbr>`
+    - `<ins>`
+    - `<del>`
+- Attributes
+    - `<a>`
+        - `data-toggle`
+        - `role`
+        - `aria-haspopup`
+        - `aria-expanded`
+    
 
 License
 =======
