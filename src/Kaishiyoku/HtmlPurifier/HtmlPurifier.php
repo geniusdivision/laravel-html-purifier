@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaishiyoku\Menu;
+namespace Kaishiyoku\HtmlPurifier;
 
 use HTMLPurifier_Config;
 

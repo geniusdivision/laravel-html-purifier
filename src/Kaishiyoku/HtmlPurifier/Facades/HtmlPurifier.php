@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaishiyoku\Menu\Facades;
+namespace Kaishiyoku\HtmlPurifier\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
