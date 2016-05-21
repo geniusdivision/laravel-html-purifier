@@ -17,19 +17,19 @@ class HtmlPurifier
      */
     private $purifier;
 
-    private function init()
+    /**
+     * HtmlPurifier constructor.
+     */
+    public function __construct()
     {
-        // only instantiate if the object doesn't already exist
-        if ($this->purifier == null) {
-            $this->config = HTMLPurifier_Config::createDefault();
+        $this->config = HTMLPurifier_Config::createDefault();
 
-            $this->config->set('HTML.Doctype', 'HTML 4.01 Transitional');
-            $this->config->set('CSS.AllowTricky', true);
+        $this->config->set('HTML.Doctype', 'HTML 4.01 Transitional');
+        $this->config->set('CSS.AllowTricky', true);
 
-            $this->setHtml5Properties();
+        $this->setHtml5Properties();
 
-            $this->purifier = new Purifer($this->config);
-        }
+        $this->purifier = new Purifer($this->config);
     }
 
     private function setHtml5Properties()
@@ -92,8 +92,6 @@ class HtmlPurifier
 
     public function purify($value)
     {
-        $this->init();
-
         return $this->purifier->purify($value);
     }
 }
