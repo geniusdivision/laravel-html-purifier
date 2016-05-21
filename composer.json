@@ -1,6 +1,6 @@
 {
     "name": "kaishiyoku/laravel-html-purifier",
-    "description": "A HTML filter using htmlpurifier for Laravel 5",
+    "description": "A HTML filter using htmlpurifier with additional HTML5 rules.",
     "type": "library",
     "license": "MIT",
     "authors": [
