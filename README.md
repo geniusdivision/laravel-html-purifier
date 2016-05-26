@@ -71,6 +71,7 @@ Added rules
 - Attributes
     - `<a>`
         - `data-toggle`
+        - `data-provide`
         - `role`
         - `aria-haspopup`
         - `aria-expanded`

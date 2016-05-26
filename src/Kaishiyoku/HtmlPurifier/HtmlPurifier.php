@@ -84,6 +84,7 @@ class HtmlPurifier
 
             // Bootstrap Dropdown
             $def->addAttribute('a', 'data-toggle', 'Text');
+            $def->addAttribute('a', 'data-provide', 'Text');
             $def->addAttribute('a', 'role', 'Text');
             $def->addAttribute('a', 'aria-haspopup', 'Bool');
             $def->addAttribute('a', 'aria-expanded', 'Bool');
