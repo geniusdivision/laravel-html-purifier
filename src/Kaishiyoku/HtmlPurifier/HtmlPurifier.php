@@ -88,6 +88,7 @@ class HtmlPurifier
             $def->addAttribute('a', 'role', 'Text');
             $def->addAttribute('a', 'aria-haspopup', 'Bool');
             $def->addAttribute('a', 'aria-expanded', 'Bool');
+            $def->addAttribute('a', 'data-lightbox', 'Text');
         }
     }
 
