@@ -27,6 +27,11 @@ class HtmlPurifier
         $this->config->set('HTML.Doctype', 'HTML 4.01 Transitional');
         $this->config->set('CSS.AllowTricky', true);
 
+        $this->config->set('HTML.SafeIframe', true);
+
+        // allow YouTube and Vimeo
+        $this->config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%');
+
         $this->setHtml5Properties();
 
         $this->purifier = new Purifer($this->config);
