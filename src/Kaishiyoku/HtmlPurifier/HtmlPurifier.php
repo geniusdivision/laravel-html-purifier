@@ -96,6 +96,7 @@ class HtmlPurifier
             $def->addAttribute('a', 'data-lightbox', 'Text');
             $def->addAttribute('a', 'data-click', 'Text');
             $def->addAttribute('a', 'data-color', 'Text');
+            $def->addAttribute('a', 'data-hover-color', 'Text');
             $def->addAttribute('a', 'data-background-color', 'Text');
             $def->addAttribute('a', 'data-hover-background-color', 'Text');
         }
