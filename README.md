@@ -1,4 +1,4 @@
-![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)
+![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
  ![Packagist](https://img.shields.io/packagist/v/kaishiyoku/laravel-html-purifier.svg) ![Packagist](https://img.shields.io/packagist/dt/kaishiyoku/laravel-html-purifier.svg)
 
 A HTML filter using htmlpurifier with additional HTML5 rules.
