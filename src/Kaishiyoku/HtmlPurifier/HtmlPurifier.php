@@ -29,6 +29,8 @@ class HtmlPurifier
 
         $this->config->set('HTML.SafeIframe', true);
 
+        $this->config->set('Attr.EnableID', true);
+
         // allow YouTube and Vimeo
         $this->config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%');
 
