@@ -6,7 +6,7 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 use Kaishiyoku\HtmlPurifier\HtmlPurifier;
 
-class ServiceProvider extends ServiceProvider
+class HtmlPurifierServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

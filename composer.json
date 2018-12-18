@@ -23,7 +23,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Kaishiyoku\\HtmlPurifier\\ServiceProvider"
+        "Kaishiyoku\\HtmlPurifier\\HtmlPurifierServiceProvider"
       ],
       "aliases": {
         "HtmlPurifier": "Kaishiyoku\\HtmlPurifier\\Facades\\HtmlPurifier"
