@@ -18,5 +18,15 @@
         "psr-4": {
             "Kaishiyoku\\": "src/Kaishiyoku"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kaishiyoku\\HtmlPurifier\\ServiceProvider"
+            ],
+            "aliases": {
+                "HtmlPurifier": "Kaishiyoku\\HtmlPurifier\\Facades\\HtmlPurifier"
+            }
+        }
     }
 }
