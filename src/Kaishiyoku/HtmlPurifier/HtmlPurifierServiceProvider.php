@@ -1,10 +1,9 @@
 <?php
 
-namespace Kaishiyoku\Menu;
+namespace Kaishiyoku\HtmlPurifier;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
-use Kaishiyoku\HtmlPurifier\HtmlPurifier;
 
 class HtmlPurifierServiceProvider extends ServiceProvider
 {
