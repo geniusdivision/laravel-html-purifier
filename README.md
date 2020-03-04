@@ -73,11 +73,17 @@ Added rules
     - `<del>`
 - Attributes
     - `<a>`
-        - `data-toggle`
-        - `data-provide`
-        - `role`
-        - `aria-haspopup`
-        - `aria-expanded`
+        - `data-toggle`: Text
+        - `data-provide`: Text
+        - `role`: Text
+        - `aria-haspopup`: Bool
+        - `aria-expanded`: Bool
+        - `data-lightbox`: Text
+        - `data-click`: Text
+        - `data-color`: Text
+        - `data-hover-color`: Text
+        - `data-background-color`: Text
+        - `data-hover-background-color`: Text
     
 
 License
