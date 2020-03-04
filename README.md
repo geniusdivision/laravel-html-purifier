@@ -1,5 +1,5 @@
-![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
- ![Packagist](https://img.shields.io/packagist/v/kaishiyoku/laravel-html-purifier.svg) ![Packagist](https://img.shields.io/packagist/dt/kaishiyoku/laravel-html-purifier.svg)
+![Maintenance](https://img.shields.io/maintenance/yes/2020.svg)
+![Packagist](https://img.shields.io/packagist/v/kaishiyoku/laravel-html-purifier.svg) ![Packagist](https://img.shields.io/packagist/dt/kaishiyoku/laravel-html-purifier.svg)
 
 A HTML filter using htmlpurifier with additional HTML5 rules.
 
@@ -73,11 +73,17 @@ Added rules
     - `<del>`
 - Attributes
     - `<a>`
-        - `data-toggle`
-        - `data-provide`
-        - `role`
-        - `aria-haspopup`
-        - `aria-expanded`
+        - `data-toggle`: Text
+        - `data-provide`: Text
+        - `role`: Text
+        - `aria-haspopup`: Bool
+        - `aria-expanded`: Bool
+        - `data-lightbox`: Text
+        - `data-click`: Text
+        - `data-color`: Text
+        - `data-hover-color`: Text
+        - `data-background-color`: Text
+        - `data-hover-background-color`: Text
     
 
 License
