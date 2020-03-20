@@ -2,50 +2,46 @@
 
 namespace Kaishiyoku\HtmlPurifier;
 
+use HTMLPurifier;
 use HTMLPurifier_Config;
-use HTMLPurifier as Purifer;
 
-class HtmlPurifier
+class LaravelHtmlPurifier
 {
     /**
-     * @var HTMLPurifier_Config
-     */
-    private $config;
-
-    /**
-     * @var \HTMLPurifier
+     * @var HTMLPurifier
      */
     private $purifier;
 
-    /**
-     * HtmlPurifier constructor.
-     */
     public function __construct()
     {
-        $this->config = HTMLPurifier_Config::createDefault();
+        $config = HTMLPurifier_Config::createDefault();
 
-        $this->config->set('HTML.Doctype', 'HTML 4.01 Transitional');
-        $this->config->set('CSS.AllowTricky', true);
+        $config->set('HTML.Doctype', 'HTML 4.01 Transitional');
+        $config->set('CSS.AllowTricky', true);
 
-        $this->config->set('HTML.SafeIframe', true);
+        $config->set('HTML.SafeIframe', true);
 
-        $this->config->set('Attr.EnableID', true);
+        $config->set('Attr.EnableID', true);
 
         // allow YouTube and Vimeo
-        $this->config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%');
+        $config->set('URI.SafeIframeRegexp', '%^(https?:)?//(www\.youtube(?:-nocookie)?\.com/embed/|player\.vimeo\.com/video/)%');
 
-        $this->setHtml5Properties();
+        $config = $this->setHtml5Properties($config);
 
-        $this->purifier = new Purifer($this->config);
+        $this->purifier = new HTMLPurifier($config);
     }
 
-    private function setHtml5Properties()
+    /**
+     * @param HTMLPurifier_Config $config
+     * @return HTMLPurifier_Config
+     */
+    private function setHtml5Properties($config)
     {
         // Set some HTML5 properties
-        $this->config->set('HTML.DefinitionID', 'html5-definitions');
-        $this->config->set('HTML.DefinitionRev', 1);
+        $config->set('HTML.DefinitionID', 'html5-definitions');
+        $config->set('HTML.DefinitionRev', 1);
 
-        if ($def = $this->config->maybeGetRawHTMLDefinition()) {
+        if ($def = $config->maybeGetRawHTMLDefinition()) {
             // http://developers.whatwg.org/sections.html
             $def->addElement('section', 'Block', 'Flow', 'Common');
             $def->addElement('nav',     'Block', 'Flow', 'Common');
@@ -102,8 +98,14 @@ class HtmlPurifier
             $def->addAttribute('a', 'data-background-color', 'Text');
             $def->addAttribute('a', 'data-hover-background-color', 'Text');
         }
+
+        return $config;
     }
 
+    /**
+     * @param string $value
+     * @return string
+     */
     public function purify($value)
     {
         return $this->purifier->purify($value);

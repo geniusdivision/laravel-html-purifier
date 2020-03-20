@@ -17,16 +17,16 @@
   },
   "autoload": {
     "psr-4": {
-      "Kaishiyoku\\": "src/Kaishiyoku"
+      "Kaishiyoku\\HtmlPurifier\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Kaishiyoku\\HtmlPurifier\\HtmlPurifierServiceProvider"
+        "Kaishiyoku\\HtmlPurifier\\ServiceProvider"
       ],
       "aliases": {
-        "HtmlPurifier": "Kaishiyoku\\HtmlPurifier\\Facades\\HtmlPurifier"
+        "HtmlPurifier": "Kaishiyoku\\HtmlPurifier\\Facade"
       }
     }
   }
