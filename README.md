@@ -10,7 +10,6 @@ Table of contents
   * [Installation](#installation)
     * [Composer](#composer)
   * [Usage](#usage)
-  * [Added rules](#added-rules)
   * [License](#license)
   * [Author](#author)
 
@@ -47,44 +46,6 @@ $purifiedHtml = $purifier->purify($dirtyHtml);
 ```
 
 If you have any issues feel free to open a ticket.
-
-Added rules
-===========
-- Elements
-    - `<section>`
-    - `<nav>`
-    - `<article>`
-    - `<aside>`
-    - `<header>`
-    - `<footer>`
-    - `<address>`
-    - `<hgroup>`
-    - `<figure>`
-    - `<figcaption>`
-    - `<video>`
-    - `<source>`
-    - `<s>`
-    - `<var>`
-    - `<sub>`
-    - `<sup>`
-    - `<mark>`
-    - `<wbr>`
-    - `<ins>`
-    - `<del>`
-- Attributes
-    - `<a>`
-        - `data-toggle`: Text
-        - `data-provide`: Text
-        - `role`: Text
-        - `aria-haspopup`: Bool
-        - `aria-expanded`: Bool
-        - `data-lightbox`: Text
-        - `data-click`: Text
-        - `data-color`: Text
-        - `data-hover-color`: Text
-        - `data-background-color`: Text
-        - `data-hover-background-color`: Text
-    
 
 License
 =======
