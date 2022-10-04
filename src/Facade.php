@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaishiyoku\HtmlPurifier;
+namespace GeniusDivision\HtmlPurifier;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;
 
